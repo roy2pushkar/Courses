@@ -4,6 +4,8 @@ import Filter from "./components/Filter";
 import Cards from "./components/Cards";
 import { apiUrl, filterData } from "./data";
 import { toast } from "react-toastify";
+import Spinners from "./components/Spinners";
+import { Toast } from "react-toastify";
 const App = () => {
   const [courses, setCourses] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -32,7 +34,7 @@ const App = () => {
         <Filter filterData={filterData} />
       </div>
       <div>
-        <Cards />
+        <div>{loading ? <Spinners /> : <cards />}</div>
       </div>
     </div>
   );
