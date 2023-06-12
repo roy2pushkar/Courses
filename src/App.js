@@ -34,7 +34,7 @@ const App = () => {
         <Filter filterData={filterData} />
       </div>
       <div>
-        <div>{loading ? <Spinners /> : <cards />}</div>
+        <div>{loading ? <Spinners /> : <cards courses={courses} />}</div>
       </div>
     </div>
   );

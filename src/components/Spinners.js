@@ -1,9 +1,11 @@
 import React from "react";
+import "./Spinnerrs.css";
 
 const Spinners = () => {
   return (
     <div>
-      <nav></nav>
+      <div className="spinner"></div>
+      <p>Loading...</p>
     </div>
   );
 };
