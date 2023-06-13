@@ -16,7 +16,7 @@ const App = () => {
       let response = await fetch(apiUrl);
       let output = await response.json();
       ///output ->
-      setCourses(output);
+      setCourses(output.data);
     } catch (error) {
       toast.error("There are some issues in Network");
     }
