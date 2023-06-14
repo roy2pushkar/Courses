@@ -26,7 +26,7 @@ const App = () => {
     fetchData();
   });
   return (
-    <div>
+    <div className="min-h-screen flex flex-col ">
       <div>
         <Navbar />
       </div>
@@ -34,7 +34,7 @@ const App = () => {
         <Filter filterData={filterData} />
       </div>
       <div>
-        <div>{loading ? <Spinners /> : <cards courses={courses} />}</div>
+        <div>{loading ? <Spinners /> : <Cards courses={courses} />}</div>
       </div>
     </div>
   );
