@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Navbar from "./components/Navbar";
-import Filter from "./components/Filter";
 import Cards from "./components/Cards";
+import Filter from "./components/Filter";
 import { apiUrl, filterData } from "./data";
-import { toast } from "react-toastify";
+import { useState, useEffect } from "react";
 import Spinners from "./components/Spinners";
-import { Toast } from "react-toastify";
+import { toast } from "react-toastify";
+
 const App = () => {
   const [courses, setCourses] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -18,13 +19,14 @@ const App = () => {
       ///output ->
       setCourses(output.data);
     } catch (error) {
-      toast.error("There are some issues in Network");
+      toast.error("Network me koi dikkat hai");
     }
     setLoading(false);
   }
+
   useEffect(() => {
     fetchData();
-  });
+  }, []);
   return (
     <div className="min-h-screen flex flex-col ">
       <div>
